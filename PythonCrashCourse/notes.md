@@ -1,5 +1,6 @@
 ##Key points: 
 
+### Variables and simple data types
 - variable naming conventions
 - Variables Are Labels
   - a variable references a certain value
@@ -27,3 +28,11 @@
 
 COMMENTS
 
+### Lists
+
+- collection of items in a particular order
+- items in your list don’t have to be related in any particular way
+- square brackets ([]) indicate a list
+- Accessing Elements in a List
+  - Index Positions Start at 0, Not 1
+  - 
