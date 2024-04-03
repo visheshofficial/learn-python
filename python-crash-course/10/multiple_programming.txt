@@ -1,0 +1,3 @@
+I am learning Python.
+I already know Java.
+I am learning C++.

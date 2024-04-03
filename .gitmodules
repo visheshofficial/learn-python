@@ -1,0 +1,3 @@
+[submodule "python-crash-course/pcc_3e"]
+	path = python-crash-course/pcc_3e
+	url = https://github.com/ehmatthes/pcc_3e.git
