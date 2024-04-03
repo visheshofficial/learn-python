@@ -1,0 +1,5 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "notebook.formatOnCellExecution": true,
+    "notebook.formatOnSave.enabled": true
+}
