@@ -37,7 +37,7 @@ class Account:
             print("Incorrect password")
             return None
 
-    def deposit(self, password: str, amount: float) -> float | None:
+    def deposit(self, amount: float, password: str) -> float | None:
         """Deposit the specified amount into the account if the password is correct
         and the amount is positive.
 
@@ -84,8 +84,3 @@ class Account:
 
         self._balance -= amount
         return self._balance
-
-
-account_1 = Account("Joe B", 1000, "democ")
-account_1.display_info()
-print(account_1._name)
