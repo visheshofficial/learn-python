@@ -1,5 +1,11 @@
 {
     "python.analysis.typeCheckingMode": "basic",
     "notebook.formatOnCellExecution": true,
-    "notebook.formatOnSave.enabled": true
+    "notebook.formatOnSave.enabled": true,
+    "window.zoomLevel": 1,
+    "editor.fontSize": 14,
+    "editor.formatOnSave": false,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python"
+      
 }
