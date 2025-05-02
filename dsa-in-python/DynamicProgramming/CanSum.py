@@ -11,7 +11,7 @@ def canSum(target_sum, numbers, memo={}):
         if reminder >= 0:
             if canSum(reminder, numbers, memo):
                 return True
-    memo[reminder]=False
+    memo[reminder] = False
     return False
 
 
@@ -26,7 +26,7 @@ def canSum(target_sum, numbers, memo={}):
 #     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(canSum(7, [2, 3]))
     print(canSum(7, [5, 3, 4, 7]))
     print(canSum(7, [2, 4]))

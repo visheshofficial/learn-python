@@ -26,10 +26,18 @@ def canConstruct(target, word_bank, memo={}):
 #     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(canConstruct("", ["ab", "abc", "cd", "def", "abcd"]))  # true
     print(canConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))  # true
-    print(canConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))  # false
-    print(canConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]))  # true
-    print(canConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
-                       ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"]))  # false
+    print(
+        canConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"])
+    )  # false
+    print(
+        canConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+    )  # true
+    print(
+        canConstruct(
+            "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
+            ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"],
+        )
+    )  # false

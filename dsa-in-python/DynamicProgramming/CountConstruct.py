@@ -24,11 +24,15 @@ def countConstruct(target, word_bank, memo={}):
 #     return count
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # print(countConstruct("purple", ["purp", "p", "ur", "le", "purpl"]))  # 2
     # print(countConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))  # 1
     # print(countConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd","ef","c"]))  # 1
-    print(countConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))  # 0
-    print(countConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]))  # 1
+    print(
+        countConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"])
+    )  # 0
+    print(
+        countConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+    )  # 1
     # print(countConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeef",
     #                      ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"]))  # 0

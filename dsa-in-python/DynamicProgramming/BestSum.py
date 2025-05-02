@@ -1,5 +1,6 @@
 # https://www.youtube.com/watch?v=oBt53YbR9Kk&t=1332s
 
+
 def bestSum(target_sum, numbers, memo={}):
     print(target_sum)
     if target_sum in memo:
@@ -38,7 +39,7 @@ def bestSum(target_sum, numbers, memo={}):
 #     return shortest_result
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # print(bestSum(7, [2, 3], {}))  # [3,2,2]
     # print(bestSum(7, [5, 3, 4, 7], {}))  # [7]
     # print(bestSum(7, [2, 4], {}))  # None

@@ -13,13 +13,15 @@ def isSubsetSum(array, array_length, total):
     for i in range(array_length + 1):
         dp[i][0] = True
 
-    for row in (dp):
+    for row in dp:
         print(row)
 
     for array_size in range(1, array_length + 1):
         for cur_total in range(1, total + 1):
             if array[array_size - 1] <= cur_total:
-                dp[array_size][cur_total] = dp[array_size - 1][cur_total - array]  # or dp[]
+                dp[array_size][cur_total] = dp[array_size - 1][
+                    cur_total - array
+                ]  # or dp[]
             else:
                 dp[array_size][cur_total] = dp[array_size - 1][cur_total - array]
 
@@ -39,7 +41,7 @@ def canSum(target_sum, numbers, memo={}):
         if reminder >= 0:
             if canSum(reminder, numbers, memo):
                 return True
-    memo[reminder]=False
+    memo[reminder] = False
     return False
 
 
@@ -54,7 +56,7 @@ def canSum(target_sum, numbers, memo={}):
 #     return False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(canSum(7, [2, 3]))
     print(canSum(7, [5, 3, 4, 7]))
     print(canSum(7, [2, 4]))

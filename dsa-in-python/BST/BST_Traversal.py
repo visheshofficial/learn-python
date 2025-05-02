@@ -5,6 +5,7 @@ import unittest
 # question's sample test case. Feel free to add, edit,
 # or remove test cases in this file as you see fit!
 
+
 def inOrderTraverse(tree, array):
     # Write your code here.
     current_node = tree
@@ -63,4 +64,4 @@ class TestProgram(unittest.TestCase):
 
         self.assertEqual(inOrderTraverse(root, []), inOrder)
         self.assertEqual(preOrder, preOrderTraverse(root, []))
-        self.assertEqual(postOrder,postOrderTraverse(root, []) )
+        self.assertEqual(postOrder, postOrderTraverse(root, []))

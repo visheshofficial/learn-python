@@ -10,12 +10,9 @@ def threeNumberSort(array, order):
     second_index = 0
     third_index = len(array) - 1
     while second_index <= third_index:
-        if array[second_index]== order[0]:
-            first_index+=1
-            second_index+=1
-
-
-
+        if array[second_index] == order[0]:
+            first_index += 1
+            second_index += 1
 
     return array
 

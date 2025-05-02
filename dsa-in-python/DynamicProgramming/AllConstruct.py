@@ -32,13 +32,23 @@ def allConstruct(target, word_bank):
 
     return result
 
+
 import pprint
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     print(allConstruct("purple", ["purp", "p", "ur", "le", "purpl"]))  # 2
     # print(countConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd"]))  # 1
-    pprint.pprint(allConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd", "ef", "c"]))  # 4
+    pprint.pprint(
+        allConstruct("abcdef", ["ab", "abc", "cd", "def", "abcd", "ef", "c"])
+    )  # 4
     # print(allConstruct("abcdefg", ["ab", "abc", "cd", "def", "abcd", "ef", "c"]))  # 4
     # print(allConstruct("skateboard", ["bo", "rd", "ate", "t", "ska", "sk", "boar"]))  # 0
-    print(allConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"]))  # 1
-    print(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-                         ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"]))  # 0
+    print(
+        allConstruct("enterapotentpot", ["a", "p", "ent", "enter", "ot", "o", "t"])
+    )  # 1
+    print(
+        allConstruct(
+            "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            ["e", "ee", "eee", "eeee", "eeeee", "eeeeee"],
+        )
+    )  # 0

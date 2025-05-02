@@ -2,8 +2,8 @@ def caesarCipherEncryptor(string, key):
     # Write your code here.
     key = key % 26
     new_string = []
-    a_ord = ord('a')
-    z_ord = ord('z')
+    a_ord = ord("a")
+    z_ord = ord("z")
 
     for letter in string:
         pos = ord(letter)

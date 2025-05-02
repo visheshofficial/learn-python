@@ -1,4 +1,3 @@
-
 class Checkout:
     class Discount:
         def __init__(self, nbrItems, price):
@@ -10,11 +9,9 @@ class Checkout:
         self.discounts = {}
         self.items = {}
 
-
     def addDiscount(self, item, nbrOfItems, price):
         discount = self.Discount(nbrOfItems, price)
         self.discounts[item] = discount
-
 
     def addItemPrice(self, item, price):
         self.prices[item] = price

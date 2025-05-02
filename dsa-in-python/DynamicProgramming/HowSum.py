@@ -1,5 +1,6 @@
 # https://www.youtube.com/watch?v=oBt53YbR9Kk&t=1332s
 
+
 # def howSum(target_sum, numbers, memo={}):
 #     # print(target_sum)
 #     if target_sum == 0:
@@ -50,9 +51,9 @@ def howSum(target_sum, numbers, memo={}):
 #     return None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(howSum(7, [2, 3], {}))  # [3,2,2]
     print(howSum(7, [5, 3, 4, 7], {}))  # [7] OR [3,4]
     print(howSum(7, [2, 4], {}))  # None
     print(howSum(8, [2, 3, 5], {}))  # [2,2,2,2] or [3,5]
-    print(howSum(300, [7, 14], {})) # None
+    print(howSum(300, [7, 14], {}))  # None

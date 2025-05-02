@@ -25,7 +25,7 @@ def grid_traversal(row, col, memo={}):
 #     return grid_traversal(row - 1, col) + grid_traversal(row, col - 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(grid_traversal(1, 2))
     print(grid_traversal(2, 0))
     print(grid_traversal(2, 3))

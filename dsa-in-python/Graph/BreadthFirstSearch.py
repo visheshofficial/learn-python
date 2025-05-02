@@ -18,7 +18,6 @@ class Node:
         return array
 
 
-
 import unittest
 
 
@@ -30,4 +29,7 @@ class TestProgram(unittest.TestCase):
         graph.children[2].addChild("G").addChild("H")
         graph.children[0].children[1].addChild("I").addChild("J")
         graph.children[2].children[0].addChild("K")
-        self.assertEqual(graph.breadthFirstSearch([]), ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"])
+        self.assertEqual(
+            graph.breadthFirstSearch([]),
+            ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"],
+        )

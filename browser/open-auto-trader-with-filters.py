@@ -1,12 +1,13 @@
 import webbrowser
 from urllib.parse import urlencode
 
+
 def generate_autotrader_url():
     """
     Generates an AutoTrader search URL with predefined parameters.
     """
     base_url = "https://www.autotrader.co.uk/car-search"
-    
+
     # Configurable search parameters
     postcode = "RG6 3HA"  # User's postcode
     price_from = 3500  # Minimum price of the car
@@ -16,12 +17,16 @@ def generate_autotrader_url():
     max_mileage = 100000  # Maximum mileage allowed
     min_engine_power = 100  # Minimum engine power in HP
     body_type = "Hatchback"  # Type of car body
-    fuel_types = ["Petrol", "Petrol Hybrid", "Petrol Plug-in Hybrid"]  # Fuel type options
+    fuel_types = [
+        "Petrol",
+        "Petrol Hybrid",
+        "Petrol Plug-in Hybrid",
+    ]  # Fuel type options
     transmission = "Manual"  # Type of transmission
     seller_type = "trade"  # Type of seller (private/trade)
     doors = 5  # Number of doors in the car
     sort = "year-dsc"  # Sorting preference (descending by year)
-    
+
     query_params = {
         "annual-tax-cars": "TO_35",
         "body-type": body_type,
@@ -37,11 +42,12 @@ def generate_autotrader_url():
         "seller-type": seller_type,
         "sort": sort,
         "transmission": transmission,
-        "year-from": year_from
+        "year-from": year_from,
     }
-    
+
     url = f"{base_url}?{urlencode(query_params, doseq=True)}"
     return url
+
 
 def open_autotrader_search():
     """
@@ -50,6 +56,7 @@ def open_autotrader_search():
     url = generate_autotrader_url()
     print(f"Opening URL: {url}")
     webbrowser.open(url)
+
 
 # Execute the function
 open_autotrader_search()

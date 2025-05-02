@@ -13,11 +13,14 @@ options.add_argument("--headless")  # Run in headless mode (no UI)
 options.add_argument("--no-sandbox")
 options.add_argument("--disable-dev-shm-usage")
 
+
 def extract_car_details(url):
     """Extracts car details from an AutoTrader listing using Selenium."""
-    
+
     # Start Selenium WebDriver
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+    driver = webdriver.Chrome(
+        service=Service(ChromeDriverManager().install()), options=options
+    )
     driver.get(url)
     time.sleep(5)  # Allow time for JavaScript to load
 
@@ -37,15 +40,23 @@ def extract_car_details(url):
         "Model": json_ld_data.get("model", "Not found"),
         "Year": json_ld_data.get("productionDate", "Not found"),
         "Fuel Type": json_ld_data.get("fuelType", "Not found"),
-        "Mileage": json_ld_data.get("mileageFromOdometer", {}).get("value", "Not found"),
+        "Mileage": json_ld_data.get("mileageFromOdometer", {}).get(
+            "value", "Not found"
+        ),
         "Transmission": json_ld_data.get("vehicleTransmission", "Not found"),
-        "Location": json_ld_data.get("offers", {}).get("availableAtOrFrom", {}).get("address", {}).get("addressLocality", "Not found"),
-        "Seller": json_ld_data.get("offers", {}).get("seller", {}).get("name", "Not found"),
+        "Location": json_ld_data.get("offers", {})
+        .get("availableAtOrFrom", {})
+        .get("address", {})
+        .get("addressLocality", "Not found"),
+        "Seller": json_ld_data.get("offers", {})
+        .get("seller", {})
+        .get("name", "Not found"),
         "Images": json_ld_data.get("image", []),
-        "URL": url
+        "URL": url,
     }
 
     return car_details
+
 
 # Example URL
 car_url = "https://www.autotrader.co.uk/car-details/202501127959996"

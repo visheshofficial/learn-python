@@ -5,6 +5,7 @@ class AnonymousSurvey:
         """Store a question, and prepare to store responses."""
         self.question = question
         self.responses = []
+
     def show_question(self):
         """Show the survey question."""
         print(self.question)

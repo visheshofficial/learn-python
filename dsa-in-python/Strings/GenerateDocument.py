@@ -10,9 +10,9 @@ def generateDocument(characters, document):
             character_count_map[c] += 1
 
     for c in document:
-        if c not in character_count_map or character_count_map[c]==0:
+        if c not in character_count_map or character_count_map[c] == 0:
             return False
-        character_count_map[c]-=1
+        character_count_map[c] -= 1
 
     return True
 

@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(self, name):
         self.children = []
@@ -16,7 +15,6 @@ class Node:
         return array
 
 
-
 import unittest
 
 
@@ -28,4 +26,7 @@ class TestProgram(unittest.TestCase):
         graph.children[2].addChild("G").addChild("H")
         graph.children[0].children[1].addChild("I").addChild("J")
         graph.children[2].children[0].addChild("K")
-        self.assertEqual(["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"],graph.depthFirstSearch([]))
+        self.assertEqual(
+            ["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"],
+            graph.depthFirstSearch([]),
+        )

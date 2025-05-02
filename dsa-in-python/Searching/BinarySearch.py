@@ -12,6 +12,7 @@ def binarySearch(array, target):
             left = middle
     return -1
 
+
 # This file is initialized with a code version of this
 # question's sample test case. Feel free to add, edit,
 # or remove test cases in this file as you see fit!

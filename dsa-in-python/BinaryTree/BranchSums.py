@@ -48,5 +48,3 @@ class BinaryTreeNew(BinaryTree):
             queue.append(current.right)
         self.insert(values, i + 1)
         return self
-
-

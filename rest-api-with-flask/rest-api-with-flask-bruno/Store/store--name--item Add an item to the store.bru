@@ -1,0 +1,18 @@
+meta {
+  name: /store/<name>/item Add an item to the store
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://127.0.0.1:5000/store/My Store/item
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "table",
+    "price": 45.55
+  }
+}
