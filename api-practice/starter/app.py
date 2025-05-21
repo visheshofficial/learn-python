@@ -7,7 +7,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def fetch_country_by_region_and_keyword(url:str,region:str,keyword:str)->List:
+def fetch_country_by_region_and_keyword(url: str, region: str, keyword: str) -> List:
     """
     Fetch countries mathcing the provided criteria.
     """
@@ -16,7 +16,7 @@ def fetch_country_by_region_and_keyword(url:str,region:str,keyword:str)->List:
     try:
         while True:
 
-            params = {"page": page,"region":region,"name":keyword}
+            params = {"page": page, "region": region, "name": keyword}
             resposne = requests.get(url, params=params)
             data = resposne.json()
             # print(data)
@@ -24,7 +24,7 @@ def fetch_country_by_region_and_keyword(url:str,region:str,keyword:str)->List:
 
             countries.extend(data.get("data", []))
 
-            if page == data.get("total_pages",0):
+            if page == data.get("total_pages", 0):
                 break
             page += 1
     except requests.exceptions.HTTPError as e:
@@ -40,17 +40,17 @@ def format_and_sort(countries):
 
     for country in countries:
         print(country("name"))
-        if country.get("population",0):
-            country["population"]=0
+        if country.get("population", 0):
+            country["population"] = 0
 
-    sorted_countries=sorted(countries, key = lambda c:(c.population,c.name))
+    sorted_countries = sorted(countries, key=lambda c: (c.population, c.name))
     return sorted_countries
 
-def find_contries(url:str) -> List[str] :
-    countries= fetch_country_by_region_and_keyword(url,"Asia","stan")
+
+def find_contries(url: str) -> List[str]:
+    countries = fetch_country_by_region_and_keyword(url, "Asia", "stan")
 
     format_and_sort(countries)
-
 
 
 def main():
@@ -62,7 +62,7 @@ def main():
 
     countries = find_contries(BASE_URL)
     if countries:
-        pprint.pprint([ (x["name"],x["population"],x["region"]) for x in countries])
+        pprint.pprint([(x["name"], x["population"], x["region"]) for x in countries])
 
 
 if __name__ == "__main__":
